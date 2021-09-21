@@ -1,0 +1,12 @@
+@use "./abstracts" as *;
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border:  5px solid $color2;
+    border-radius: 7px;
+    margin: 25px;
+}

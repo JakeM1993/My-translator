@@ -1,5 +1,4 @@
 const input = document.getElementById("text-box")
-const button = document.querySelector("button")
 const display = document.getElementById("display")
 // console.log(input)
 // console.log(button)
@@ -56,7 +55,7 @@ const translate = (input) => {
     display.innerHTML =  finalTranslation   
 };
 
-button.addEventListener("click", () => {
+input.addEventListener("input", () => {
   translate(input.value)
 })
 
