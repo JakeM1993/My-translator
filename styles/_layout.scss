@@ -4,6 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: $color1;
+    background-color: $color1b;
 }
 
 .header {
@@ -11,5 +13,26 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 5px solid $color2;
+    border-bottom: 2px solid $color4;
+    border-radius: 6px;
+    width: 60%;
+    margin: 20px auto;
 }
+
+.translate {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#display {
+    width: 200px;
+    height: 100px;
+    border: solid $color4 5px;
+    border-radius: 8px;
+}
+

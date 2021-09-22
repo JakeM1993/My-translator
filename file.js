@@ -4,59 +4,52 @@ const display = document.getElementById("display")
 // console.log(button)
 // console.log(display)
 
-const morseCode = {
-  a: ".-",
-  b: "-...",
-  c: "-.-.",
-  d: "-..",
-  e: ".",
-  f: "..-.",
-  g: "--.",
-  h: "....",
-  i: "..",
-  j: ".---",
-  k: "-.-",
-  l: ".-..",
-  m: "--",
-  n: "-.",
-  o: "---",
-  p: ".--.",
-  q: "--.-",
-  r: ".-.",
-  s: "...",
-  t: "-",
-  u: "..-",
-  v: "...-",
-  w: ".--",
-  x: "-..-",
-  y: "-.--",
-  z: "--..",
-  0: "-----",
-  1: ".----",
-  2: "..---",
-  3: "...--",
-  4: "....-",
-  5: ".....",
-  6: "-....",
-  7: "--...",
-  8: "---..",
-  9: "----.",
-  " ": "    ",
-};
+// const morseCode = {
+//   a: " .- ",
+//   b: " -... ",
+//   c: " -.-. ",
+//   d: " -.. ",
+//   e: " . ",
+//   f: " ..-. ",
+//   g: " --. ",
+//   h: " .... ",
+//   i: " .. ",
+//   j: " .--- ",
+//   k: " -.- ",
+//   l: " .-.. ",
+//   m: " -- ",
+//   n: " -. ",
+//   o: " --- ",
+//   p: " .--. ",
+//   q: " --.- ",
+//   r: " .-. ",
+//   s: " ... ",
+//   t: " - ",
+//   u: " ..- ",
+//   v: " ...- ",
+//   w: " .-- ",
+//   x: " -..- ",
+//   y: " -.-- ",
+//   z: " --.. ",
+//   0: " ----- ",
+//   1: " .---- ",
+//   2: " ..--- ",
+//   3: " ...-- ",
+//   4: " ....- ",
+//   5: " ..... ",
+//   6: " -.... ",
+//   7: " --... ",
+//   8: " ---.. ",
+//   9: " ----. ",
+//   "   ": "      ",
+// };
 
 
-const translate = (input) => {
-    
-    let characterArray = input.toLowerCase().split("");
-    let translation = characterArray.map((character) => {
-        return morseCode[character];
-    });
-    let finalTranslation = translation.join(" ");
-    display.innerHTML =  finalTranslation   
-};
+import { translate } from "./testable.js"
 
 input.addEventListener("input", () => {
-  translate(input.value)
+  const result = translate(input.value)
+  display.innerHTML = result
 })
 
 
