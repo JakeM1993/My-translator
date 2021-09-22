@@ -1,0 +1,8 @@
+@use "./abstracts" as *;
+
+#text-box {
+    width: 200px;
+    height: 100px;
+    border: solid $color4 5px;
+    border-radius: 8px;
+}
